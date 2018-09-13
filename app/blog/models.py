@@ -24,7 +24,7 @@ class Post(models.Model):
         # 데이터베이스에 저장되는 테이블의 이름을 my_post 로 지정, 이항목을 생략하면 디폴트는 앱명_모델클래스명을 테이블명으로 지정함
         db_table = 'my_post'
         # modify 컬럼 기준으로 내림차순으로 정렬
-        ordering = ('-modify_date')
+        ordering = ('-modify_date', )
 
     def __str__(self):
         return self.title
