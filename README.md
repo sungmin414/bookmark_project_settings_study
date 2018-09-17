@@ -32,5 +32,17 @@ pk를 사용하면 숫자로만 되어 있어 그 내용을 유츄하기 어렵�
 `SlugField에 unique 옵션을 추가해 특정 포스트를 검색시 기본 키 대신에 사용, allow_unicode 옵션을 추가하면 한글 처리 가능, help_text는 해당 컬럼을 설명해주는 문구로 폼화면에 나타남`
 
 
+### templates 
 
+    paginator 객체의 목록, 플러스 당신이 각 페이지에 가지고 싶은 아이템의 수를, 그리고 당신에게 각 페이지에 대한 항목을 액세스하기위한 방법을 제공
+    (자세한 내용은 문서 보기)
 
++ 템플릿에서 URL 추출 함수
+> 템플릿 파일에서 URL을 추출하는 문법은 2가지가 있다. `get_absoulte_url()` 메소드를 호출하는 방법과 `{% url %}` 템플릿 태그를 사용하는 방법이 있다.
+두가지 모두 URL 패턴명을 이용한다는 점은 동일함. `{% url %}` 태그는 직접 태그의 인자로 URL 패턴명을 사용하는 반면, `get_absolute_url()` 메소드에서는 간접적으로 URL 패턴명을 사용한다.
+`get_absolute_url()` 메소드는 모델 클래스의 메소드로 정의되어 있어야 사용 가능하고 이메소드를 정의할때 `reverse() 함수`를 사용하고, `reverse()` 함수 인자로 URL 패턴명을 사용하고 있다.
++ 두문장은 동일한 문장이므로, 어느 문장을 사용해도 무방
+
+       ex)
+       <a href='{{ post.get_absolute_url }}'>{{ post.title }}</a>
+       <a href='{% url 'blog:post_detail' post.slug %}'>{{ post.title }}</a> 
