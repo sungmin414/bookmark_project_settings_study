@@ -2,7 +2,7 @@
 
 <div>
     <ul>
-        {% for post in objects_list %}
+        {% for post in object_list %}
         <li>{{ post.modify_date|date:"Y-m-d" }}&nbsp;&nbsp;&nbsp;
             <a href="{{ post.get_absolute_url }}"><strong>{{ post.title }}</strong></a>
         </li>
