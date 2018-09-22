@@ -16,7 +16,7 @@
 + 함수형 뷰, 클래스형 뷰
 + 개발자가 편한 방식으로 코딩하면 되므로 보통은 하나의 프로젝트에 둘 다 사용하는 경우가 많다.
 + 클래스형 뷰를 사용하는 것이 장고가 제공하는 제네릭 뷰를 사용할 수 있고 재활용 및 확장성 측면에서 유리  
-    
++ TemplateView를 사용하는 경우는 필수적으로 template_name 클래스 변수를 오버라이딩으로 지정해줘야 한다.
     
     ListView, DetailView
     
@@ -47,4 +47,3 @@ pk를 사용하면 숫자로만 되어 있어 그 내용을 유츄하기 어렵�
        <a href='{{ post.get_absolute_url }}'>{{ post.title }}</a>
        <a href='{% url 'blog:post_detail' post.slug %}'>{{ post.title }}</a> 
 
-+ 
