@@ -47,3 +47,4 @@ pk를 사용하면 숫자로만 되어 있어 그 내용을 유츄하기 어렵�
        <a href='{{ post.get_absolute_url }}'>{{ post.title }}</a>
        <a href='{% url 'blog:post_detail' post.slug %}'>{{ post.title }}</a> 
 
+복습하기
