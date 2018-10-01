@@ -47,4 +47,21 @@ pk를 사용하면 숫자로만 되어 있어 그 내용을 유츄하기 어렵�
        <a href='{{ post.get_absolute_url }}'>{{ post.title }}</a>
        <a href='{% url 'blog:post_detail' post.slug %}'>{{ post.title }}</a> 
 
-복습하기
+### 가상환경 사용하기
++ 인터넷에서 다운로드한 라이브러리들이 서로의 버전이 맞지 않아 오동작을 일으키는 것을 방지하기위해서 독립된 파이썬 가상환경을 만들어주는 툴
+
+
+    설치)python3 -m venv (myvenv)
+    가상실행)source myvenv/bin/activate
+    가상나오기) deactivate
+    현재의 가상 환경에 설치된 패키지 목록을 구함) pip freeze 
+    패키지 최신화) pip install -U pip wheel setuptools
+    
+    
++ https://pypi.python.org/  파이썬용 패키지 검색 사이트
++ https://www.djangopackages.com/   장고용 패키지 검색 사이트
++ 타임존 관리하는 패키지 pytz   
++ 태그기능을 재공하는 오픈소스 패키지 django-tagging 
++ 댓글기능 오픈소스 패키지 django-disqus
++ 이미지 처리하는 패키지 Pillow
+    
