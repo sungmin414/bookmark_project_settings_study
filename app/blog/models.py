@@ -2,6 +2,8 @@ from django.db import models
 
 # Create your models here.
 from django.urls import reverse
+# 새로 설치한 tagging 앱은 자체 필드인 tagField를 정의 하고있다.
+from tagging.fields import TagField
 
 
 class Post(models.Model):
@@ -14,6 +16,9 @@ class Post(models.Model):
     # auto_now_add(객체가 생성될때의 시각을 자동기록), auto_now(객체가 데이터베이스에 저장될 때의 시각을 자동 기록)
     create_date = models.DateTimeField('CREATE DATE', auto_now_add=True)
     modify_date = models.DateTimeField('MODIFY DATE', auto_now=True)
+    # tag 컬럼을 TagField 로 정의, TagField 필드는 CharField 필드를 상속받아서 디폴트로 max_length=255, Blank=True 로 정의하고 있어
+    # tag 내용을 채우지 않아도 된다.
+    tag = TagField()
 
     # 필드 속성 외에 필요한 파라미터가 있으면 Meta 내부 클래스로 정의
     class Meta:

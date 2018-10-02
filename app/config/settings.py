@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     # 애플리케이션 등록
     'bookmark.apps.BookmarkConfig',
     'blog.apps.BlogConfig',
+    'tagging.apps.TaggingConfig',
 ]
 
 MIDDLEWARE = [
