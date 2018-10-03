@@ -64,4 +64,21 @@ pk를 사용하면 숫자로만 되어 있어 그 내용을 유츄하기 어렵�
 + 태그기능을 재공하는 오픈소스 패키지 django-tagging 
 + 댓글기능 오픈소스 패키지 django-disqus
 + 이미지 처리하는 패키지 Pillow
+
+
+### 테그와 댓글
+
++ settigs에 tagging, disqus 앱 등록후 사용
+
++ tagging 사용 순서, settings에 apps에 패키지 등록 -> 모델 코딩 -> url코딩 -> view코딩
+    -> templates코딩 -> css코딩 
+
++ disqus 사용 순서, settings에 apps에 패키지 등록 -> disqus.com 홈페이지에서 설정 -> 
+    원하는 채널 3개 선택후 Conntinue 클릭 -> DISQUS 사이트에 등록 -> 톱니바퀴 누르고(Add Disqus To Site 선택)
+    -> Site name : Python Web Progamming(Django) -> Choose your unnique Disqus URL : pythonwebprogramming
+    -> Category: Tech 까지하면 DISQUS에서 관리하는 python web programming(django)가 설정된 것
+    -> Settings 선택 General 선택 -> Shortname 항목 기억하고 settings에 사용하기위해 추가해줌
+    -> 모델코딩(makemigrations/migrate 만 해줌) -> templates코딩 
     
+`django-disqus를 사용하는 장고의 각 아이트는 사이트 구별자를 갖고 있어햐한다. 이를위해 장고의 기본 애플리케이션인 django.contrib.sites를 등록하고
+ SITE_ID 값을 임의로 지정한다. SITE_ID값은 중복되면 안된다.`        

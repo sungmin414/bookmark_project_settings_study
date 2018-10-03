@@ -51,8 +51,19 @@ INSTALLED_APPS = [
     # 애플리케이션 등록
     'bookmark.apps.BookmarkConfig',
     'blog.apps.BlogConfig',
+    # 테그 패키지
     'tagging.apps.TaggingConfig',
+    # 댓글 패키지
+    'disqus',
+    'django.contrib.sites',
+
+
 ]
+
+# 댓글 패키지 사용시 같이써야함
+DISQUS_WEBSITE_SHORTNAME = 'python-web-programming-django-7xkipkmfw2'
+SITE_ID = 1
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
