@@ -1,6 +1,6 @@
 from django.urls import path, re_path
 
-from .views import PostLV, PostDV, PostAV, PostYAV, PostDAV, PostTAV, PostMAV, TagTV, PostTOL
+from .views import PostLV, PostDV, PostAV, PostYAV, PostDAV, PostTAV, PostMAV, TagTV, PostTOL, SearchFormView
 
 app_name = 'blog'
 
@@ -14,6 +14,7 @@ urlpatterns = [
     path('<int:year>/<str:month>/<int:day>/', PostDAV.as_view(), name='post_day_archive'),
     path('today/', PostTAV.as_view(), name='post_today_archive'),
     path('tag/', TagTV.as_view(), name='tag_cloud'),
-    path('tag/<str:tag>/', PostTOL.as_view(), name='tagged_object_list')
+    path('tag/<str:tag>/', PostTOL.as_view(), name='tagged_object_list'),
+    path('search/', SearchFormView.as_view(), name='search')
 
 ]
