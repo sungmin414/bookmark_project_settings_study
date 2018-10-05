@@ -56,8 +56,8 @@ INSTALLED_APPS = [
     # 댓글 패키지
     'disqus',
     'django.contrib.sites',
-
-
+    # photo 앱추가
+    'photo.apps.PhotoConfig',
 ]
 
 # 댓글 패키지 사용시 같이써야함

@@ -53,6 +53,8 @@ Pygments = "==2.2.0"
 "Send2Trash" = "==1.5.0"
 django-tagging = "*"
 django-disqus = "*"
+pillow = "*"
+pilkit = "*"
 
 [dev-packages]
 
