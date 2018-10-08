@@ -31,14 +31,17 @@ class Photo(models.Model):
     # 디렉터리를 만들고 그 곳에 업로드하는 사진의 원본 및 썸네일 사진을 저장.
     image = ThumbnailImageField(upload_to='photo/%Y/%m')
     description = models.TextField('Photo Description', blank=True)
+    # 객체가 생성될때의 시각을 자동으로 기록
     upload_date = models.DateTimeField('Upload Date', auto_now_add=True)
 
+    # 객체 리스트를 출력할 때의 title 컬럼 기준으로 오름차순으로 보여줌
     class Meta:
         ordering = ['title']
 
     def __str__(self):
         return self.title
 
+    # 정의된 객체를 지칭하는 URL 을 반환
     def get_absolute_url(self):
         return reverse('photo:photo_detail', args=(self.id,))
 
