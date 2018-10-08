@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+# 장고 내장 함수인 path() 임포트
 from django.urls import path, include
 
 from .views import HomeView
