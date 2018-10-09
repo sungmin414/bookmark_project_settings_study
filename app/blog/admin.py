@@ -15,4 +15,5 @@ class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
 
+# admin.site.register() 함수를 사용해 Post 와 PostAdmin 클래스를 Admin 사이트에 등록
 admin.site.register(Post, PostAdmin)

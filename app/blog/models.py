@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 from django.urls import reverse
-# 새로 설치한 tagging 앱은 자체 필드인 tagField를 정의 하고있다.
+# 새로 설치한 tagging 앱은 자체 필드인 TagField 를 정의 하고있다.
 from tagging.fields import TagField
 
 

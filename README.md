@@ -31,6 +31,7 @@ pk를 사용하면 숫자로만 되어 있어 그 내용을 유츄하기 어렵�
 
 `SlugField에 unique 옵션을 추가해 특정 포스트를 검색시 기본 키 대신에 사용, allow_unicode 옵션을 추가하면 한글 처리 가능, help_text는 해당 컬럼을 설명해주는 문구로 폼화면에 나타남`
 
++ auto_now_add (생성 날짜), auto_now(수정한 날짜)
 
 ### templates 
 

@@ -147,5 +147,5 @@ USE_TZ = True
 
 # 정적파일에 접근할 URL접두어
 STATIC_URL = '/static/'
-# User-uploaded file을 접근할 URL접두어
+# User-uploaded file 을 접근할 URL 접두어
 MEDIA_URL = '/media/'
