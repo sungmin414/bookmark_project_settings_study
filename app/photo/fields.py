@@ -37,7 +37,7 @@ class ThumbnailImageFieldFile(ImageFieldFile):
         size = (128, 128)
         img.thumbnail(size, Image.ANTIALIAS)
         # 가로x세로 비율이 동일한 128x128px 크기의 썸네일 이미지를 만들어준다. 이미지의 색상은 흰색이고 완전 불투명한 이미지
-        background = Image.new('RGBA', size, (255, 255, 255, 0))
+        background = Image.new('RGB', size, (255, 255, 255, 0))
         # 썸네일과 백그라운드 이미지를 합쳐서 정사각형 모양의 썸네일 이미지를 만듬. 정사각형의 빈공간은 백그라운드 이미지에 의해서 하얀색이 된다.
         background.paste(
             img, (int((size[0] - img.size[0]) / 2), int((size[1] - img.size[1]) / 2)))
