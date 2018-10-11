@@ -20,7 +20,7 @@
         {% for photo in item.photo_set.all|slice:":5" %}
         <div class="album-list-photo">
             <a href="{{ photo.get_absolute_url }}">
-                <img class="thumbnail" src="{{ photo.image.thumb_url }}" alt="">
+                <img class="thumbnail" src="{{ photo.image.thumb_url }}" alt="" />
             </a>
         </div>
         {% endfor %}

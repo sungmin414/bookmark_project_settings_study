@@ -26,6 +26,7 @@ class ThumbnailImageFieldFile(ImageFieldFile):
     # 이 함수는 원본 파일의 URL 인 url 속성에 추가해, 썸네일의 URL 인 thumb_url 속성을 만들어 준다.
     def _get_thumb_url(self):
         return _add_thumb(self.url)
+    thumb_url = property(_get_thumb_url)
 
     # 파일 시스템에 파일을 저장하고 생성하는 메소드
     def save(self, name, content, save=True):
