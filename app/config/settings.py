@@ -27,6 +27,12 @@ STATICFILES_DIRS = (STATIC_DIR, )
 # templates_dir (경로)
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
+# LOGIN 경로
+# LOGIN_URL = '/accounts/login/'
+# LOGOUT_URL = '/accounts/logout/'
+LOGIN_REDIRECT_URL = '/'
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 

@@ -19,14 +19,16 @@ from django.contrib import admin
 # 장고 내장 함수인 path() 임포트
 from django.urls import path, include
 
-from .views import HomeView
+from .views import HomeView, UserCreateDoneTV, UserCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/register/', UserCreateView.as_view(), name='register'),
+    path('accounts/register/done/', UserCreateDoneTV.as_view(), name='register_done'),
     path('bookmark/', include('bookmark.urls')),
     path('blog/', include('blog.urls')),
     path('photo/', include('photo.urls')),
     path('', HomeView.as_view(), name='home')
-
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

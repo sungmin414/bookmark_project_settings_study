@@ -97,4 +97,22 @@ pk를 사용하면 숫자로만 되어 있어 그 내용을 유츄하기 어렵�
 ### Photo 앱구현
 
 + 작업순서 : 뼈대만들기 -> 모델코딩하기 -> URL 코딩 -> 뷰코딩 -> 템플릿 코딩 -> 그외 static 외 필요한 코딩
- 복습       
+
+
+### LOGIN, LOGOUT
+
++ 인증 기능은 웹 프로그래밍의 필수기능으로 장고가 기본적으로 제공하는 기능중 하나이다.
++ 장고패키지에 포함되어 있는 django.contrib.auth 앱이 인증 기능을 담당한다.
++ 로그인 처리 하기위해서는 3가지를 settings.py 파일에 지정해야한다.
+
+> LOGIN_URL : 로그인이 필요해서 로그인 페이지로 리다이렉트시키고자 할 때 사용하는 URL,
+    login_required() 데코레이터에서 사용한다는 점을 유의, 만일 이 항목을 지정하지 않으면 디폴트로 /accounts/login/ URL을 사용
+
+> LOGOUT_URL : 로그아웃 시키고자 할 때 사용하는 URL, 만일 이항목을 지정하지 않으면 디폴트로 /accounts/logout/ URL을 사용
+
+> LOGIN_REDIRECT_URL : 장고의 기본 로그인 뷰인 contrib.auth.login() 뷰는 로그인 처리가 성공한 후에 next 파라라미터로
+    지정한 URL 로 리다이렉트시킨다. 만일 next 파라미터가 지정되지 않으면 이 항목에서 지정한 URL 로 리다이렉트시킴,
+    만일 settings.py 파일에 항목을 지정하지 않으면 디폴트로 /accounts/profile/ URL 을 사용,
+    이 항목도 login_required() 데코레이터에서 사용한다는 점을 유의
+    
++ 편집용 뷰 종류( CreateView, UpdateView, DeleteView, FormView)   
